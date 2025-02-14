@@ -1,0 +1,308 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #121212;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: clamp(10px, 2vw, 20px);
+  background: linear-gradient(to bottom, #1a1a1a, #121212);
+}
+
+/* Header */
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: clamp(15px, 3vw, 30px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(15px, 3vw, 30px);
+  gap: clamp(10px, 2vw, 20px);
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 clamp(10px, 2vw, 20px);
+}
+
+.search-box {
+  flex: 1;
+  min-width: min(250px, 100%);
+}
+
+.search-box input {
+  width: 100%;
+  padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 20px);
+  border: 2px solid #333;
+  border-radius: 25px;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  background: #1f1f1f;
+  color: #ffffff;
+}
+
+.sort-box select {
+  padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 20px);
+  border: 2px solid #333;
+  border-radius: 25px;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  background: #1f1f1f;
+  color: #ffffff;
+  width: min(200px, 100%);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: clamp(10px, 2vw, 25px);
+  padding: clamp(10px, 2vw, 20px);
+  width: 100%;
+}
+
+/* Card styles */
+.card {
+  background: #1f1f1f;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.card-image {
+  position: relative;
+  padding-top: min(140%, calc(100vw * 0.4));
+}
+
+.card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.card-content {
+  padding: clamp(10px, 2vw, 15px);
+}
+
+.card-content h2 {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  line-height: 1.4;
+  max-height: 2.8em;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 15px);
+  margin-top: clamp(15px, 3vw, 30px);
+  padding: clamp(10px, 2vw, 20px);
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 20px);
+  border-radius: 25px;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  min-width: min(120px, 100%);
+}
+
+.page-info {
+  padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 20px);
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  text-align: center;
+}
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #121212;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.sort-dropdown, .sort-btn {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sort-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.page-info {
+  font-size: 16px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box, 
+  .sort-box {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .pagination {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .pagination button,
+  .page-info {
+    width: 100%;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 1400px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Handle ultrawide screens */
+@media (min-width: 2000px) {
+  .container {
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+}
+.loading {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.card {
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
